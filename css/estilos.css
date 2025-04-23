@@ -16,6 +16,7 @@
 }
 
 html {
+
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
    
@@ -23,7 +24,7 @@ html {
 
 body {
     background-image: url("https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
    
@@ -153,6 +154,10 @@ h3 a:hover{
 }
 
 @media screen and (max-width: 760px){
+    .body{
+        background-size: cover;
+    }
+    
     .target {
         width: 40rem;
         height: 30rem;
@@ -192,7 +197,12 @@ h3 a:hover{
 }
 
 @media screen and (max-width: 380px){
-    
+
+    .body{
+        background-size: cover;
+    }
+
+     
     .container {
         background-color: none;
     }
