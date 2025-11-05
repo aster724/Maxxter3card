@@ -251,15 +251,21 @@ h3 a:hover{
     }
     .social-networks {
         margin-top: 15px;
-        flex-direction: column; 
-        align-items: center;
+        display: flex; /* Habilitar Flexbox */
+        flex-direction: row; /* Permitir que los elementos se pongan en fila */
+        justify-content: center; /* Centrar los grupos de botones */
+        flex-wrap: wrap; /* CRUCIAL: Permite que los botones salten de línea */
+        width: 100%; /* Ocupar el ancho completo del contenedor */
+        max-width: 320px; /* Limitar el ancho de la cuadrícula para centrarla mejor */
+        margin-left: auto;
+        margin-right: auto;
     }
     .button {
-        width: 85%; /* Botones grandes y usables */
-        max-width: 280px; /* Limitar el ancho máximo */
-        height: 5rem; /* Hacerlos más altos para que sean fáciles de tocar */
-        margin: 8px 0;
-        border-radius: 15px;
+        /* Tamaño fijo para que todos quepan en 2 o 3 columnas */
+        width: 80px; /* Ancho fijo para el botón (fácil de tocar) */
+        height: 50px; /* Alto fijo */
+        margin: 5px; /* Pequeño espacio entre cada botón */
+        border-radius: 10px;
     }
     .social-networks img {
         height: 3rem; /* Iconos más grandes para mejor visibilidad */
