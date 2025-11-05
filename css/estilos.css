@@ -32,13 +32,15 @@ body {
 
 .container {
     width: auto;
-    height: 860px;
+    height: auto;
+    min-height: 100vh;
     background-color: rgba(81, 81, 81, .5);
 
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0;
 }
 
 .target {
@@ -90,8 +92,8 @@ body {
 }
 
 .info  h1{
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 500;
     margin-top: 60px;
     letter-spacing: 1px;
     text-align: center;
@@ -196,44 +198,70 @@ h3 a:hover{
     }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 450px){
 
-    .body{
+    body { 
         background-size: cover;
     }
 
      
     .container {
-        background-color: none;
+        background-color: transparent;
+        padding: 10px;
     }
 
     .target {
-        width: auto;
-        height: auto;
+        width: 95%; /* Ocupa todo el ancho del móvil */
+        height: auto; /* Se ajusta automáticamente al contenido */
+        margin: 10px auto;
+        border-radius: 15px; /* Radio de borde más pequeño */
     }
     .header {
-        height: 9.5rem;
+        height: 7rem;
     }
+    .information {
+        height: auto; /* Fluye con el contenido */
+    }
+    
     .information .logo {
-        top: -35px;
+        top: -45px;
     }
     .info h1 {
-        font-size: 2.8rem;
-        margin-top: 65px;
+        font-size: 2.8rem; 
+        margin-top: 55px; 
+    }
+    .info h2 {
+         font-size: 1.6rem;
+         text-align: center;
+         padding: 0 10px; /* Asegura que el texto no desborde */
+         line-height: 1.3; /* Espacio entre líneas para mejor lectura */
     }
     .info h3 {
-        font-size: 1.8rem;
-        margin-top: 5px;
+        font-size: 1.7rem; /* Texto más pequeño y legible */
+        font-weight: 500; /* Lo hice más negrito */
+        margin-top: 10px;
+        padding: 0 10px; 
+        line-height: 1.5; /* Espacio entre líneas crucial para móviles */
+    }
+    .info h3 p {
+        font-size: 1.4rem; /* Tamaño adecuado para el detalle de servicios */
+        font-weight: 300;
+        margin-top: 10px;
+        text-align: center;
     }
     .social-networks {
-        margin-top: 10px;
-        flex-direction: column;
+        margin-top: 15px;
+        flex-direction: column; 
         align-items: center;
     }
     .button {
-        width: 12rem;
-        height: 3rem;
-        margin: 5px 0;
-        border-radius: 12px;
+        width: 85%; /* Botones grandes y usables */
+        max-width: 280px; /* Limitar el ancho máximo */
+        height: 5rem; /* Hacerlos más altos para que sean fáciles de tocar */
+        margin: 8px 0;
+        border-radius: 15px;
+    }
+    .social-networks img {
+        height: 3rem; /* Iconos más grandes para mejor visibilidad */
     }
 }
